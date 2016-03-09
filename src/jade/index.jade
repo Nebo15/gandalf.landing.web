@@ -5,33 +5,23 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     title <%= appname %>
     link(rel='stylesheet', href='css/app.css')
-  body.container
-    .row.row-centered
-      .welcome.col-md-6.col-centered
-        h1 Hello, <%= appname %>
-        p We've created generator to speed up project starting process.
-        p Generator configured project for using:
-        ul
-          li gulp
-          li sass/scss + compass
-        p
-          | We've also added
-          code .editorconfig
-          |  and
-          code .jshintrc
-          |  to simplify your team collaboration.
-        ul
-          li SASS. Boostrap 3 Grid, Akella's Lib (See Github)
-          li Gulp. Deploy Gh-pages, Build
-          li Images. Sprites generators via Compass
-        h2 Requirements
-        ul
-          li Compass
-          li NPM
-          li Bower
-        p I've also included configurations for JSHint, but it had been configured.
-        p
-          i.icon.icon-logo
+  body
+    section.section.section--bg
+      .logo
+        img(src="images/logo.png", alt="Gandalf Logo")
+      .heading-subtitle Take control over your risks
+      .heading-title Open-Source Decision Engine
+        br
+        | for Big-Data
+
+      .btn-group
+        a.btn.btn--red View on GitHub
+        a.btn.btn--orange Read API Docs
+      .icon-group
+        span.icon.icon-php7
+        span.icon.icon-mongodb
+        span.icon.icon-laravel
+        span.icon.icon-angularjs
 
     // build:js js/app.min.js
     script(src='js/config.js')
