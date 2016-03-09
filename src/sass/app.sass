@@ -49,6 +49,7 @@ body
     .icon-group
       padding-left: 10px
       margin-top: 40px
+  padding: 60px
 
 .heading-title
   font-size: $text-big
@@ -96,3 +97,46 @@ body
   margin-left: -30px
   .icon
     margin-left: 30px
+
+.text-red
+  color: $red
+
+.features
+  &__in
+    display: table
+    width: 100%
+
+  &__side
+    width: 290px
+    padding: 40px 50px
+    background-color: $gray
+  &__main
+    background-color: $white
+    padding: 20px 50px
+
+  &__main, &__side
+    display: table-cell
+
+.feature
+  position: relative
+  display: block
+  min-height: 140px
+  padding-left: 20px
+  max-width: 400px
+
+  h3
+    font-size: $text-medium
+    font-weight: 700
+    margin-bottom: 20px
+  &__index
+    position: absolute
+    top: 20px
+    left: -20px
+    font-size: 145px
+    font-weight: 700
+    color: #f0f0f0
+    z-index: 0
+    line-height: 1
+  &__main
+    position: relative
+    z-index: 1
