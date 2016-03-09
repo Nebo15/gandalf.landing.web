@@ -1,6 +1,7 @@
 {
   "name": "gandalf.landing.web",
   "version": "0.9.0",
+  "repository": "https://github.com/alexeybondarenko/simple-webapp.git",
   "scripts": {
     "postinstall": "bower install",
     "start": "gulp",
