@@ -1,6 +1,7 @@
 {
   "name": "gandalf.landing.web",
   "version": "0.9.0",
-  "dependencies": {}
+  "dependencies": {
+    "prism": "Prism#^1.4.1"
+  }
 }
-
