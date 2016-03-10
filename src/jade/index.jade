@@ -3,7 +3,7 @@ html
   head(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-    title Gandalf
+    title Gandalf - Open-Source Decision Engine for Big-Data
     link(rel='stylesheet', href='css/app.css')
   body
     section.section.section--bg.section--gradient
@@ -16,8 +16,8 @@ html
           | for Big-Data
 
         .btn-group
-          a.btn.btn--red View on GitHub
-          a.btn.btn--orange Read API Docs
+          a.btn.btn--red(href="https://github.com/Nebo15/gandalf.api") View on GitHub
+          a.btn.btn--orange(href="http://nebo15.github.io/qbill.docs/gandalf.html#introduction") Read API Docs
         .icon-group
           .icon-shadow: a.icon.icon-php7(rel="noindex", href="http://php.net/")
           .icon-shadow: a.icon.icon-mongodb(rel="noindex", href="https://www.mongodb.org/")
@@ -70,11 +70,10 @@ html
             p To make is suitable for Big Data we decided to build it on top of use very reliable open-source database MongoDB, that have good sharding capabilities and easy to maintain.
             p Also we believe that vendor-lock is a bad thing, so we published all source code on a MIT license, so you are free to change it as you wish.
     section.section.section--footer
-      .icon.icon-nebo15
-      .copyright Copyright ⓒ 2015. All rights reserved
+      a.icon.icon-nebo15(href="https://nebo15.com/")
+      .copyright ⓒ Nebo #15, 2015
 
     // build:js js/app.min.js
     script(src="bower_components/prism/prism.js")
     script(src="bower_components/prism/components/prism-bash.js")
     // endbuild
-
