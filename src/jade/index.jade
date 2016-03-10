@@ -4,7 +4,14 @@ html
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     title Gandalf
-    link(rel='stylesheet', href='css/app.css')
+    // build:css /css/app.min.css
+    link(rel='stylesheet', href='/bower_components/highlightjs/styles/github-gist.css')
+    link(rel='stylesheet', href='/css/app.css')
+    // endbuild
+    // build:js /js/app.min.js
+    script(src="/bower_components/highlightjs/highlight.pack.js")
+    script(src="/js/app.js")
+    // endbuild
   body
     section.section.section--bg.section--gradient
       .section__in
@@ -16,8 +23,8 @@ html
           | for Big-Data
 
         .btn-group
-          a.btn.btn--red View on GitHub
-          a.btn.btn--orange Read API Docs
+          a.btn.btn--red(href="https://github.com/Nebo15/gandalf.api", title="View on Github", rel="noindex") View on GitHub
+          a.btn.btn--orange(href="http://nebo15.github.io/qbill.docs/gandalf.html#introduction", title="Gandalf Docs", rel="noindex") Read API Docs
         .icon-group
           .icon-shadow: a.icon.icon-php7(rel="noindex", href="http://php.net/")
           .icon-shadow: a.icon.icon-mongodb(rel="noindex", href="https://www.mongodb.org/")
@@ -57,8 +64,8 @@ html
         img.section__block(src="http://placehold.it/1000x600", alt="Decision table preview")
         .section__subtitle Send some data to <br/>Gandalf, and get client <br/>score in result!
         .section__block
-          pre: code.language-bash
-            | $ curl -u API_KEY:API_SECRET http://gandalf-api.nebo15.com/api/v1/tables/56cb3882f70466293d8b456f/decisions -d '{ "borrowers_phone_verification": "sample", "contact_person_phone_verification":"sample","internal_credit_history":"sample","employment":true,"property":true}'
+          .code-preview: pre: code.bash
+            include ./content/curl-sample.html
     section.section.section--story
       .section__in
         .story: .story__in
@@ -71,10 +78,4 @@ html
             p Also we believe that vendor-lock is a bad thing, so we published all source code on a MIT license, so you are free to change it as you wish.
     section.section.section--footer
       .icon.icon-nebo15
-      .copyright Copyright ⓒ 2015. All rights reserved
-
-    // build:js js/app.min.js
-    script(src="bower_components/prism/prism.js")
-    script(src="bower_components/prism/components/prism-bash.js")
-    // endbuild
-
+      .copyright Copyright ⓒ 2016. All rights reserved

@@ -1,5 +1,3 @@
 'use strict';
 
-window.appName = '<%= appname %>';
-
-
+hljs.initHighlightingOnLoad();
