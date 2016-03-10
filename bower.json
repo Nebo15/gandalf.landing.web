@@ -2,7 +2,6 @@
   "name": "gandalf.landing.web",
   "version": "0.9.0",
   "dependencies": {
-    "prism": "Prism#^1.4.1",
     "highlightjs": "^9.2.0"
   }
 }
