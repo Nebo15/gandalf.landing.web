@@ -1,6 +1,27 @@
 .icon
   display: inline-block
 
-@each $s in logo,angularjs,laravel,mongodb,php7,nebo15
-  .icon-#{$s}
-    +s(#{$s})
+=icon($name)
+  //+s($name)
+  //+retina
+  +sr('#{$name}@2x')
+
+.icon-angularjs
+  +svg(angularjs, 85, 22)
+.icon-logo
+  +svg(logo, 183, 95)
+//.icon-logo-white
+//  +svg(logo_white)
+
+.icon-mongodb
+  +svg(mongodb, 98, 27)
+.icon-php7
+
+  +svg(php7, 45, 15)
+
+
+.icon-laravel
+  +icon(laravel)
+
+.icon-nebo15
+  +svg(done-by-nebo15, 67, 92)

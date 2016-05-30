@@ -23,7 +23,7 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   pngquant = require('imagemin-pngquant'),
   _ = require('lodash'),
-  ngConstant = require('gulp-ng-constant')
+  ngConstant = require('gulp-ng-constant'),
   gutil = require('gulp-util'),
   stream = require('stream');
 
