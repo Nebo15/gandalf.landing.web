@@ -141,6 +141,12 @@ body
   margin-bottom: 28px
   line-height: 1.2
 
+=btn-hover($color)
+  &:hover
+    background-color: rgba($color, .4)
+  &:active
+    background-color: rgba($color, .8)
+
 .btn
   display: inline-block
   appearance: none
@@ -152,10 +158,12 @@ body
   line-height: 1
   transition: background-color .1s linear
 
-  &:hover
-    background-color: rgba($white, .4)
-  &:active
-    background-color: rgba($white, .8)
+  +btn-hover($white)
+
+  &.btn--white
+    border-color: $white
+    color: $white
+    +btn-hover(black)
 
   &.btn--red
     border-color: $red
