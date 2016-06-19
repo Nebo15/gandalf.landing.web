@@ -161,17 +161,23 @@ gulp.task('config', ['copy-scripts'],function () {
     .pipe(gulp.dest('www/js'));
 });
 
+gulp.task('minimize-images', function (cb) {
+  return gulp.src(['src/images/**/*.png'], {base: 'src/images'})
+    .pipe(imagemin())
+    .pipe(gulp.dest('src/images'));
+});
+
 
 gulp.task('minimize', function (cb) {
   //if (!argv.production) {
   //  return cb();
   //}
 
-  return gulp.src(['www/*.html', 'www/templates/*.html'], {base: 'www'})
+  return gulp.src(['www/**/*.{css,js,html}'], {base: 'www'})
     .pipe(useref())
-    //.pipe(gulpif('*.css', minifyCss()))
-    //.pipe(gulpif('*.js', uglify()))
-    //.pipe(gulpif('*.html', htmlmin({collapseWhitespace: true, removeComments: true})))
+    .pipe(gulpif('*.css', minifyCss()))
+    .pipe(gulpif('*.js', uglify()))
+    .pipe(gulpif('*.html', htmlmin({collapseWhitespace: true, removeComments: true})))
     .pipe(gulp.dest('www'));
 });
 
