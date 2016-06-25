@@ -87,7 +87,7 @@ html
           .story__side
             img(src="images/gandalf-shadow.png" alt="Gandalf Logo symbol with shadow")
           .story__main
-            .heading-title.text-red Story behind Gandlaf
+            h3.heading-title.text-red Story behind Gandlaf
             p We – are production oriented team, and we work for a fintech company. Almost all project that we created need a decision engine that reduces business risks. And all solutions we can find is ether old and ugly, or very expensive. So we decided to create free open-source alternative, that will be scalable, reliable and flexible enough to cover 95% of cases.
             p To make is suitable for Big Data we decided to build it on top of reliable open-source database MongoDB, that have good scaling capabilities and easy to maintain.
             p Also we believe that vendor-lock is a bad thing, so we published all source code on a GPL license, so you are free to change it as you wish.
@@ -101,15 +101,15 @@ html
         | We want to thank&nbsp;
         a(href="http://blog.bugsnag.com/bugsnag-loves-open-source") BugSnag
         | &nbsp;for a free Open Source license.
-  // build:js /js/app.min.js
-  script(src="/bower_components/highlightjs/highlight.pack.js")
-  script(src="/js/app.js")
-  // endbuild
-  script.
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-43266496-16', 'auto');
-    ga('send', 'pageview');
+    // build:js /js/app.min.js
+    script(src="/bower_components/highlightjs/highlight.pack.js")
+    script(src="/js/app.js")
+    // endbuild
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-43266496-16', 'auto');
+      ga('send', 'pageview');
 
