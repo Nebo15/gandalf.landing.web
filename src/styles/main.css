@@ -276,12 +276,22 @@ main article h3 {
 
 @media (max-width: 750px) {
     .menu-toggle {
-        display: inline-block;
+        display: block;
     }
 
     header .menu {
-        height: 0;
-        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 120px 0 0 0;
+        text-align: center;
+        background-color: rgba(56, 113, 95, .9);
+        margin-bottom: 0;
+
+        visibility: hidden;
+        opacity: 0;
     }
 
     .menu a {
