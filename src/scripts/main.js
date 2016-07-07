@@ -1,13 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
     'use strict';
 
-    var menu = document.querySelector('.menu'),
-        menuToggle = document.querySelector('.menu-toggle');
+    document.addEventListener('DOMContentLoaded', function () {
+        var menu = document.querySelector('.menu'),
+            menuToggle = document.querySelector('.menu-toggle');
 
-    menuToggle.addEventListener('click', function (e) {
-        menu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+        menuToggle.addEventListener('click', function () {
+            menu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        hljs.initHighlightingOnLoad();
     });
-
-    hljs.initHighlightingOnLoad();
-});
+})();
