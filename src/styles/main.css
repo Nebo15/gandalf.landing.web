@@ -339,6 +339,14 @@ main article h3 {
         padding-bottom: 100px;
     }
 
+    .engines:before {
+        width: 100%;
+    }
+
+    .engines:after {
+        display: none;
+    }
+
     .engines .content-box > div {
         flex: 0 0 100%;
         margin-bottom: 40px;
