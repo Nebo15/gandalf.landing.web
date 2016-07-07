@@ -1,0 +1,30 @@
+.features-list {
+    list-style-type: none;
+    counter-reset: list;
+
+    height: 600px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+.features-list li {
+    position: relative;
+    padding-left: 80px;
+    width: 47%;
+    height: 200px;
+}
+
+.features-list li:before {
+    counter-increment: list 1;
+    content: counter(list);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 78px;
+    font-weight: 700;
+    opacity: .3;
+}

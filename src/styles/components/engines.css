@@ -1,0 +1,45 @@
+.engines {
+    position: relative;
+    color: #fff;
+    padding: 140px 0;
+}
+
+.engines:before,
+.engines:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.engines:after {
+    left: 50%;
+}
+
+.engines .content-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.engines .content-box > div {
+    position: relative;
+    flex: 0 0 45%;
+    padding-bottom: 60px;
+}
+
+.engines .list {
+    margin-top: 23px;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 30px;
+}
+
+.engines .button {
+    position: absolute;
+    bottom: 0;
+}

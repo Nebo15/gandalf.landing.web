@@ -1,0 +1,42 @@
+.icon {
+    background: url('../images/spritesheet.png') 0 0 no-repeat;
+    display: inline-block;
+}
+
+.icon-nebo-15 {
+    width: 64px;
+    height: 70px;
+    background-position: -5px -5px;
+}
+
+.icon-service-status {
+    width: 27px;
+    height: 25px;
+    background-position: -5px -85px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.icon-tech-angular {
+    width: 83px;
+    height: 22px;
+    background-position: -5px -120px;
+}
+
+.icon-tech-laravel {
+    width: 88px;
+    height: 21px;
+    background-position: -5px -152px;
+}
+
+.icon-tech-mongodb {
+    width: 98px;
+    height: 27px;
+    background-position: -5px -183px;
+}
+
+.icon-tech-php {
+    width: 44px;
+    height: 15px;
+    background-position: -5px -220px;
+}
