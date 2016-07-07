@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include src="templates/head.html">
+        <title>Gandalf - Open-Source Decision Engine for Big-Data</title>
+
+        <meta name="description" content="Take control over your risks with decision and scoring engine for big-data applications. Integrates in just few hours. Free version available.">
+        <meta name="keywords" content="decision engine, scoring, tables, big-data, decision making, risk management, business rules engine, open-source, split testing, anti fraud">
+
+    </include>
+</head>
+<body class="decision-page">
+    <header>
+        <include src="templates/header.html">
+            <h2>Manage Decisions in a intuitive way</h2>
+            <h1>Gandalf Decision Engine</h1>
+        </include>
+    </header>
+
+    <main role="main">
+        <section class="main-header">
+            <section class="content-box">
+                <h3>Gandalf as a Decision Engine</h3>
+
+                <h4>Decision Tables can help you to manage cut-off risks, <br>
+                    payments routing, advertisement suggestions, <br>
+                    data validators and anything else <br>
+                    that rely on set of rules that tend to change.</h4>
+            </section>
+        </section>
+
+        <article class="how-it-works content-box">
+            <h3>How it works?</h3>
+
+            <div class="row">
+                <div class="row-content">
+                    <div class="row-marker">1</div>
+                    <h5>Create a Decision Table</h5>
+
+                    <p>Intuitive interface works just as you expect. Simply add some fields to your data model, and define rules that rely on it.</p>
+                    <p>
+                        Our concept is simple: <br>
+                        - table have columns, each column is a field in your data model; <br>
+                        - each row in this table is a rule; <br>
+                        - each cell is a validator.
+                    </p>
+
+                    <p>
+                        Whenever all validators are passed in a rule - we will return it’s Decision, Title and Description to a API consumer.
+                        Rules executed in same order as you defined them.
+                    </p>
+                </div>
+
+                <img class="row-image" src="images/image-1.png">
+            </div>
+
+            <div class="row image-left">
+                <div class="row-content">
+                    <div class="row-marker">2</div>
+                    <h5>Generate sample request with Debugger</h5>
+
+                    <p>
+                        After creating table go to built-in debugger to try your results.
+                        Enter sample data in it’s form, submit and get your first Decision!
+                    </p>
+                </div>
+
+                <img class="row-image" src="images/image-2.png">
+            </div>
+
+            <div class="row api-row">
+                <div class="row-content">
+                    <div class="row-marker">3</div>
+                    <h5>Integrate your API consumers</h5>
+
+                    <p>
+                        Generate credentials on Setting page, call Gandalf from an external system by copy-pasting sample request from debugger to your CLI.
+                    </p>
+                </div>
+
+                <div class="code-sample">
+                    <pre>
+                        <code class="bash"> <include src="templates/code-sample.html"></include></code>
+                    </pre>
+                </div>
+            </div>
+        </article>
+
+        <article class="whats-next">
+            <include src="templates/whats-next.html"></include>
+        </article>
+
+        <include src="templates/story-gandalf.html"></include>
+    </main>
+
+    <footer role="contentinfo">
+        <include src="templates/footer.html"></include>
+    </footer>
+
+    <include src="templates/scripts.html"></include>
+</body>
+</html>

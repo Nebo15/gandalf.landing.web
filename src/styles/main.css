@@ -1,0 +1,368 @@
+@import "github-gist.css";
+@import 'fonts.css';
+@import "reset.css";
+@import "icons.css";
+
+@import "components/menu.css";
+@import "components/features.css";
+@import "components/engines.css";
+
+header {
+    position: relative;
+    padding: 32px;
+    color: #fff;
+}
+
+footer {
+    padding: 32px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    background-image: linear-gradient(16deg, #54b179 0%, #24447a 100%);
+}
+
+footer nav {
+    display: inline-block;
+    margin-bottom: 23px !important;
+}
+
+header h2 {
+    margin-bottom: 24px;
+}
+
+main article {
+    padding: 64px 0;
+}
+
+main article h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.button {
+    display: inline-block;
+    border: 2px solid #e81a50;
+    padding: 0 32px !important;
+    border-radius: 70px;
+    line-height: 36px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #e61652;
+    text-decoration: none !important;
+}
+
+.button.large {
+    line-height: 50px;
+}
+
+.content-box {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 64px;
+}
+
+.try-gandalf {
+    margin: 33px 0 47px 0;
+    line-height: 50px;
+}
+
+.main-header {
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(16deg, #54b179 0%, #24447a 31%, #0a5267 100%);
+    padding: 88px 32px 88px 32px;
+}
+
+.main-header h3 {
+    margin-bottom: 32px;
+}
+
+
+.row {
+    position: relative;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+.row:after {
+    content: "";
+    width: 100%;
+    clear: both;
+    display: block;
+}
+
+.row-content {
+    display: inline-block;
+    position: relative;
+    width: 420px;
+    padding-left: 64px;
+    vertical-align: top;
+}
+
+.row-marker {
+    position: absolute;
+    left: 0;
+    top: 23px;
+    font-size: 78px;
+    font-weight: 700;
+    opacity: .3;
+}
+
+.row-image {
+    position: absolute;
+    left: 480px;
+    top: 0;
+    width: 800px;
+    box-shadow: 0 0 8px rgba(90, 90, 90, 0.5);
+    border-radius: 6px;
+}
+
+.image-left .row-image {
+    left: auto;
+    right: 460px;
+}
+
+.image-left .row-content {
+    float: right;
+}
+
+.whats-next {
+    background-size: cover;
+    color: #fff;
+}
+
+.whats-next .list {
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+    width: 49%;
+    padding: 0 23px 0 0;
+}
+
+.story {
+    width: 650px;
+}
+
+.story img {
+    float: left;
+    margin: 0 180px 50px 0;
+    width: 120px;
+}
+
+.api-row {
+    height: 300px;
+}
+
+.code-sample {
+    position: absolute;
+    top: 0;
+    left: 480px;
+    width: 40vw;
+    padding: 0 20px;
+    box-shadow: 0 0 8px rgba(90, 90, 90, 0.5);
+}
+
+@media only screen and (min-width: 1600px) {
+    .main-page > header {
+        background: url("../images/header-main-bg-2600.jpg") fixed;
+        background-size: cover;
+    }
+
+    .decision-page > header {
+        background: url("../images/header-decision-bg-2600.jpg") fixed;
+        background-size: cover;
+    }
+
+    .scoring-page > header {
+        background: url("../images/header-scoring-bg-2600.jpg") fixed;
+        background-size: cover;
+    }
+
+    .decision-page .whats-next {
+        background: url("../images/whats-next-decision-bg-2600.jpg");
+        background-size: cover;
+    }
+
+    .scoring-page .whats-next {
+        background: url("../images/whats-next-scoring-bg-1920.jpg");
+        background-size: cover;
+    }
+
+    .engines:before {
+        background: url("../images/decision-description-bg-1600.jpg");
+    }
+
+    .engines:after {
+        background: url("../images/scoring-description-bg-1600.jpg");
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .main-page > header {
+        background: url("../images/header-main-bg-1600.jpg") fixed;
+        background-size: cover;
+    }
+
+    .decision-page > header {
+        background: url("../images/header-decision-bg-1600.jpg") fixed;
+        background-size: cover;
+    }
+
+    .scoring-page > header {
+        background: url("../images/header-scoring-bg-1600.jpg") fixed;
+        background-size: cover;
+    }
+
+    .decision-page .whats-next {
+        background: url("../images/whats-next-decision-bg-1600.jpg");
+        background-size: cover;
+    }
+
+    .scoring-page .whats-next {
+        background: url("../images/whats-next-scoring-bg-1600.jpg");
+        background-size: cover;
+    }
+
+    .engines:before {
+        background-image: url("../images/decision-description-bg-800.jpg");
+    }
+
+    .engines:after {
+        background-image: url("../images/scoring-description-bg-800.jpg");
+    }
+}
+
+@media (max-width: 920px) {
+    .content-box {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .row {
+        height: auto;
+    }
+
+    .image-left .row-content {
+        float: none;
+    }
+
+    .code-sample {
+        position: relative;
+        left: 0;
+        width: auto;
+        margin-top: 23px;
+    }
+
+    .row-content {
+        width: 100%;
+    }
+
+    .row-image {
+        display: block;
+        position: relative;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100%;
+        margin-top: 23px;
+    }
+}
+
+@media (max-width: 750px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    header .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 120px 0 0 0;
+        text-align: center;
+        background-color: rgba(56, 113, 95, .9);
+        margin-bottom: 0;
+
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .menu a {
+        display: block;
+        float: none !important;
+        padding: 0 !important;
+    }
+
+    .menu .icon {
+        display: none;
+    }
+
+    .menu a.button {
+        border: none;
+    }
+
+    .menu a.button:hover {
+        background-color: transparent;
+        text-decoration: underline !important;
+    }
+
+    .whats-next .list {
+        display: block;
+        width: 100%;
+    }
+
+    .story {
+        position: relative;
+        width: 100% !important;
+    }
+
+    .story img {
+        display: none;
+    }
+
+    footer .menu {
+        text-align: center;
+    }
+
+    .technologies {
+        line-height: 40px;
+    }
+
+    .features-list {
+        height: auto;
+    }
+
+    .features-list li {
+        width: 100%;
+        height: auto;
+        margin-bottom: 23px;
+    }
+
+    .engines {
+        padding-bottom: 100px;
+    }
+
+    .engines:before {
+        width: 100%;
+    }
+
+    .engines:after {
+        display: none;
+    }
+
+    .engines .content-box > div {
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+    }
+
+    .engines .list {
+        height: auto;
+    }
+}
