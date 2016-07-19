@@ -4,7 +4,7 @@
     <include src="templates/head.html">
         <title>Gandalf - Open-Source Decision Engine for Big-Data</title>
 
-        <meta name="description" content="Take control over your risks with decision and scoring engine for big-data applications. Integrates in just few hours. Free version available.">
+        <meta name="description" content="Scoring table can help you to prevent fraud, score lending applications, calculate insurance risks and in every other system, that requires quantitative representation for a transaction risk. Integrates in just few hours. Free version available.">
         <meta name="keywords" content="decision engine, scoring, tables, big-data, decision making, risk management, business rules engine, open-source, split testing, anti fraud">
 
     </include>
@@ -22,10 +22,9 @@
             <section class="content-box">
                 <h3>Gandalf as a Scoring Engine</h3>
 
-                <h4>Decision Tables can help you to manage cut-off risks, <br>
-                    payments routing, advertisement suggestions, <br>
-                    data validators and anything else <br>
-                    that rely on set of rules that tend to change.</h4>
+                <h4>Scoring Tables can help you to prevent fraud, score lending applications,
+                    calculate insurance risks <br> and in every other system,
+                    that requires quantitative representation for a transaction risk.</h4>
             </section>
         </section>
 
@@ -37,12 +36,17 @@
                     <div class="row-marker">1</div>
                     <h5>Create a Scoring Table</h5>
 
-                    <p>Intuitive interface works just as you expect. Simply add some fields to your data model, and define rules that rely on it.</p>
+                    <p>
+                      Intuitive interface works just as you expect. Simply add some fields to your data model, and define rules that rely on it.
+                    </p>
                     <p>
                         Our concept is simple:<br>
                         - table have columns, each column is a field in your data model;<br>
                         - each row in this table is a rule;<br>
                         - each cell is a validator.
+                    </p>
+                    <p>
+                      Whenever all validators are passed in a rule - we will add it’s Score to a final Decision, that is returned to a API consumer.
                     </p>
                 </div>
 
