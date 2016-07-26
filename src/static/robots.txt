@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+Host: gndf.io
+Sitemap: https://gndf.io/sitemap.xml
