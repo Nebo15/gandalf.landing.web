@@ -2,7 +2,7 @@
     <button class="menu-toggle"><b></b></button>
 
     <nav class="menu" role="navigation">
-        <a href="https://apps.gndf.io/#/sign-in" class="sign-in">Sign In</a>
+        <a href="<%= env.CABINET_URL %>/#/sign-in" class="sign-in">Sign In</a>
 
         <!-- <a href="" title="Support">Support</a> -->
         <a href="http://status.gndf.io/" title="Service status">
@@ -20,7 +20,7 @@
 
     @@content
 
-    <a class="button try-gandalf" href="https://apps.gndf.io/#/sign-up" title="Try Gandalf">Try Gandalf</a>
+    <a class="button try-gandalf" href="<%= env.CABINET_URL %>/#/sign-up" title="Try Gandalf">Try Gandalf</a>
 
     <nav class="technologies">
         <a href="http://php.net/" target="_blank" rel="nofollow">

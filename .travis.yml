@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+- 6.9.1
+cache:
+  directories:
+  - "~/.nvm"
+  - node_modules
+services:
+- docker
+git:
+  depth: 1
+env:
+  global:
+  - RELEASE_BRANCH="master"
+  - DOCKER_HUB_ACCOUNT=nebo15
+  - MAIN_BRANCHES="master develop"
+  - secure: elkgTD/+4l4//KaOq0MPUpzfGrS0z7eR1ssmEIFZTsJK4U96TMQRoo97Eg0Bzd4lx8a7ATURuWc4JRizrMV9kBS3N2V8v3lgV/4amNiENbTfh2FBpPlUAuczc6BqDssPrFQ9f4CCNWP9lW8aA+wITKJ9qYEV2zdftLH/JUeKXPTlLYuYiOj+w47YjjKRbeep5w0VRrTau5c3SiEsGtWdFhb4FsTqqZm2gMoI/GNuoJhegNqXp9dorvRsZ6+GYhGQh9jxU7kseMJXIvQH6AONrgGa6CeFdXRXoRba7FscM6hztuVe3zxN7O9hJnJhZUhcp/pbNVW3tqCoeWrVfsQrxJUeCn03mjOIpP6lZGHIrsRianFWhu7jg3CY8jTAsWsy8fgWw1+VdukpO4wSt3plfvpWy19oBf11giZ5oGNxlzG4VK14pRfjMUiSiKYqTMRrFP7oiy/qt7sr1GMTMkIDj6Ob2m830TJOocMAklNkwf6sxe+fiA7NkTGdglHpnj2YFL+Mg2TyPPLAWSvZnVUB3VtrOIJDQc60sNiFm050pWMHf1s1Mh9Y4eXqejKgDGdimsRsWDNMrvEIDF5ewTrA2XlY72LmeCbhD4A8aSY42b42XV/rjcn5AamOZyB4eCJ7hJk7SbzVvFx9yYBVZ/RWPIpJ7Tpbep1MphP5ai7UtCA=
+before_install:
+- chmod -R +x bin
+script:
+- touch .env
+- "./bin/version-increment.sh && ./bin/build.sh && ./bin/start.sh || { exit 1; }"
+- sleep 5
+- docker ps
+- RUNNING_CONTAINERS=`docker ps | wc -l`; if [ "${RUNNING_CONTAINERS//[[:space:]]/}"
+  == "1" ]; then echo "[E] Container is not started\!"; docker logs gandalf.landing.web
+  --details --since 5h; exit 1; fi;
+after_success:
+- "./bin/ci/push.sh"
