@@ -30,5 +30,3 @@ script:
   --details --since 5h; exit 1; fi;
 after_success:
 - "./bin/ci/push.sh"
-after_script:
-- npm run docker:down
