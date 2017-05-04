@@ -12,9 +12,10 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     argv = require('yargs').argv,
     sequence = require('gulp-sequence'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    nodemon = require('gulp-nodemon');
 
-gulp.task('develop', ['watch', 'server']);
+gulp.task('default', ['watch', 'server']);
 
 gulp.task('build', callback => {
     sequence('clean', ['styles', 'scripts', 'html', 'images', 'copy'])(callback);
@@ -64,12 +65,10 @@ gulp.task('watch', ['build'], () => {
 });
 
 gulp.task('server', () => {
-    browserSync({
-        files: './www/**/*',
-        server: {
-            baseDir: './www/'
-        }
-    });
+  nodemon({
+    script: 'server',
+    watch: ['server','.env'],
+  });
 });
 
 gulp.task('deploy-prefix', () => {
